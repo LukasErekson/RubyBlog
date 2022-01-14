@@ -10,7 +10,7 @@
 </ul>
 
 <% unless @article.comments.empty? %>
-  <h2>Comments (<%= @article.comments.size %>)</h2>
+  <h2>Comments (<%= @article.comments.public_count %>)</h2>
   <% @article.comments.each do |comment| %>
     <%= render @article.comments %>
   <% end %>
