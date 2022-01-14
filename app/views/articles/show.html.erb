@@ -9,9 +9,11 @@
                   data: { confirm: "Are you sure?" } %></li>
 </ul>
 
-<% unless @article.comments.empty? %>
-  <h2>Comments (<%= @article.comments.public_count %>)</h2>
-  <% @article.comments.each do |comment| %>
+<% public_comments = @article.comments.where(status: 'public') %>
+
+<% unless public_comments.empty? %>
+  <h2>Comments (<%= public_comments.count %>)</h2>
+  <% public_comments.each do |comment| %>
     <%= render @article.comments %>
   <% end %>
 <% end %>
