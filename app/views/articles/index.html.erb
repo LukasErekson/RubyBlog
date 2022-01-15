@@ -3,7 +3,7 @@
 <ul>
   <% @articles.each do |article| %>
     <% unless article.archived? %>
-      <li class="card p-2 mt-3 rounded-lg article_card">
+      <li class="card p-2 mt-3 rounded-lg article_card bg-light">
         <%= link_to article.title, article, class: 'card-title text-decoration-none article-title' %>
         <div class="card-text">
           <%= article.body[(0..80)] %> <%= '...' if article.body.size > 80%>
