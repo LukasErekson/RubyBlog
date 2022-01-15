@@ -14,7 +14,7 @@
 <% unless public_comments.empty? %>
   <h2>Comments (<%= public_comments.count %>)</h2>
   <% public_comments.each do |comment| %>
-    <%= render @article.comments %>
+    <%= render comment %>
   <% end %>
 <% end %>
 
