@@ -1,6 +1,9 @@
 <strong class="card-title">
   <%= comment.commenter %>
 </strong>
+<p class="mt-0">
+  <%= comment.updated_at.to_formatted_s(:long) %>
+</p>
 
 <div class="card p-3">
   <p>
