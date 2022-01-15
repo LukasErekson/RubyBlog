@@ -1,3 +1,4 @@
+<br />
 <strong class="card-title">
   <%= comment.commenter %>
 </strong>
@@ -7,7 +8,7 @@
 
 <div class="card p-3">
   <p>
-    <%= comment.body %>
+    <%= simple_format(comment.body) %>
   </p>
   <p class="text-right mb-0">
     <%= link_to 'Delete', [comment.article, comment],
