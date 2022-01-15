@@ -13,3 +13,16 @@
  *= require_tree .
  *= require_self
  */
+
+
+.article_card {
+    background-color: beige;
+}
+
+a {
+    color: brown;
+}
+
+a:hover {
+    color: rgb(90, 25, 25);
+}

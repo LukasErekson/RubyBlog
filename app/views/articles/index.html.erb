@@ -1,9 +1,9 @@
-<h1 class="text-center m-5">Articles</h1>
+<h1 class="text-center m-4">Articles</h1>
 
 <ul>
   <% @articles.each do |article| %>
     <% unless article.archived? %>
-      <li class="card p-2 mt-3 rounded-lg">
+      <li class="card p-2 mt-3 rounded-lg article_card">
         <%= link_to article.title, article, class: 'card-title text-decoration-none article-title' %>
         <div class="card-text">
           <%= article.body[(0..80)] %> <%= '...' if article.body.size > 80%>
