@@ -13,11 +13,3 @@
  *= require_tree .
  *= require_self
  */
-
-a {
-    color: brown;
-}
-
-a:hover {
-    color: rgb(90, 25, 25);
-}

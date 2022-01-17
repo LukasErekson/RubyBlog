@@ -1,17 +1,19 @@
 <h1 class="text-center m-4">Articles</h1>
 
-<ul>
+<ul class="p-0 list-unstyled">
   <% @articles.each do |article| %>
     <% unless article.archived? %>
-      <li class="card p-2 mt-3 rounded-lg article_card bg-light">
+      <li class= p-2 mt-3 rounded-lg">
         <%= link_to article.title, article, class: 'card-title text-decoration-none article-title' %>
-        <div class="card-text">
-          <%= article.body[(0..80)] %> <%= '...' if article.body.size > 80%>
+        <div class="">
+          <%= simple_format(article.body.size > 120 ? article.body[(0..120)] + '...' : article.body) %>
           
           <p class="mb-0 mt-4 text-right">
             <%= link_to 'Read more', article %>
           </p>
         </div>
+
+        <hr class="p-2" />
       </li>
     <% end %>
   <% end %>
