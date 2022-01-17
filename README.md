@@ -10,3 +10,4 @@ This was done as part of [The Odin Project](https://www.TheOdinProject.com) and 
 
 * Using Bootstrap to style the applicaiton using a mobile-first approach
 * Adding details such as post/comment times
+* Preserving the format (mostly newlines) of the articles and comments
