@@ -2,8 +2,8 @@
 <strong class="card-title">
   <%= comment.commenter %>
 </strong>
-<p class="mt-0">
-  <%= comment.updated_at.to_formatted_s(:long) %>
+<p class="mt-0 text-muted">
+  <%= comment.updated_at.strftime("%B %d, %Y") %>
 </p>
 
 <div class="card p-3">
