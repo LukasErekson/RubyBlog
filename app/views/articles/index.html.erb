@@ -1,10 +1,13 @@
 <h1 class="text-center m-4">Articles</h1>
 
 <ul class="p-0 list-unstyled">
-  <% @articles.each do |article| %>
+  <% @articles.sort_by { |a| a[:created_at] }.reverse.each do |article| %>
     <% unless article.archived? %>
-      <li class= p-2 mt-3 rounded-lg">
-        <%= link_to article.title, article, class: 'card-title text-decoration-none article-title' %>
+      <li class="p-2 mt-3 rounded-lg">
+        <%= link_to article.title, article, class: 'text-decoration-none article-title' %>
+        <p class="text-muted">
+          <%= article.created_at.strftime("%B %d, %Y")%>
+        </p>
         <div class="">
           <%= simple_format(article.body.size > 120 ? article.body[(0..120)] + '...' : article.body) %>
           
